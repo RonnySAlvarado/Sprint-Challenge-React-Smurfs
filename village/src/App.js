@@ -40,8 +40,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavLink to="/">Smurfs List</NavLink>
-        <NavLink to="/smurf-form">Add Smurf</NavLink>
+        <nav>
+          <NavLink exact to="/">
+            Smurfs List
+          </NavLink>
+          <NavLink to="/smurf-form">Add Smurf</NavLink>
+        </nav>
         <Route
           exact
           path="/smurf-form"

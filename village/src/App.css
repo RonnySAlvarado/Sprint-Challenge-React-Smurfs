@@ -1,3 +1,53 @@
 .App {
   text-align: center;
+  margin: 0 auto;
+  width: 1024px;
+  border: 1px solid black;
+}
+
+.App nav {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: lightblue;
+  border-bottom: 1px solid black;
+}
+
+.App nav a {
+  text-decoration: none;
+  color: blue;
+}
+
+.Smurfs {
+  background-image: url("https://hdqwalls.com/download/smurfs-the-lost-village-2017-wide-1024x1024.jpg");
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.Smurf {
+  color: black;
+  border: 1px solid black;
+  background: lightblue;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.SmurfForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  height: 50px;
+  width: 100px;
+  background: lawngreen;
+  margin-top: 20px;
+}
+
+button:hover {
+  background: green;
 }
