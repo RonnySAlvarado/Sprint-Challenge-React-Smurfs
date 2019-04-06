@@ -61,3 +61,28 @@ button:hover {
 .Smurf .delete:hover {
   background: red;
 }
+
+.edit {
+  height: 40px;
+  width: 50px;
+  background: lightgray;
+}
+.edit:hover {
+  background: gray;
+}
+
+.edit-form-container {
+  color: black;
+  border: 1px solid black;
+  background: lightblue;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.edit-form-container button {
+  background: lightgray;
+}
+
+.edit-form-container button:hover {
+  background: gray;
+}

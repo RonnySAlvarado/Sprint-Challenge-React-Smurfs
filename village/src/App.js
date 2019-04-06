@@ -43,6 +43,21 @@ class App extends Component {
       .catch(err => console.log(err));
   };
 
+  editSmurf = (id, updatedName, updatedAge, updatedHeight) => {
+    let updatedSmurf = {
+      name: updatedName,
+      age: updatedAge,
+      height: updatedHeight
+    };
+    console.log(updatedSmurf);
+    axios
+      .put(`http://localhost:3333/smurfs/${id}`, updatedSmurf)
+      .then(res => {
+        this.setState({ smurfs: res.data });
+      })
+      .catch(err => console.log(err));
+  };
+
   // add any needed code to ensure that the smurfs collection exists on state and it has data coming from the server
   // Notice what your map function is looping over and returning inside of Smurfs.
   // You'll need to make sure you have the right properties on state and pass them down to props.
@@ -68,6 +83,7 @@ class App extends Component {
               {...props}
               smurfs={this.state.smurfs}
               deleteSmurf={this.deleteSmurf}
+              editSmurf={this.editSmurf}
             />
           )}
         />
