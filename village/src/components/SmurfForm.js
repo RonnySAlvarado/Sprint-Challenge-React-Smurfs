@@ -13,17 +13,23 @@ class SmurfForm extends Component {
   addSmurf = event => {
     event.preventDefault();
     // add code to create the smurf using the api
-    let newSmurf = {
-      name: this.state.name,
-      age: this.state.age,
-      height: this.state.height
-    };
-    this.props.addSmurf(newSmurf);
-    this.setState({
-      name: "",
-      age: "",
-      height: ""
-    });
+    if (!this.state.name || !this.state.age || !this.state.height) {
+      console.log(
+        "Error, must fill all 3 input fields to add a new Smurf to the village!"
+      );
+    } else {
+      let newSmurf = {
+        name: this.state.name,
+        age: this.state.age,
+        height: this.state.height
+      };
+      this.props.addSmurf(newSmurf);
+      this.setState({
+        name: "",
+        age: "",
+        height: ""
+      });
+    }
   };
 
   handleInputChange = e => {

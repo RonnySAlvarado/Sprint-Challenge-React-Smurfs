@@ -27,6 +27,7 @@ class App extends Component {
       .post("http://localhost:3333/smurfs", newSmurf)
       .then(res => {
         this.setState({ smurfs: res.data });
+        console.log(this.state.smurfs);
       })
       .catch(err => console.log(err));
   };
